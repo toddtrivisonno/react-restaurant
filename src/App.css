@@ -6,3 +6,13 @@
   font-family: cursive;
   font-size: 3em;
 } */
+
+#reservationButton {
+  position: relative; top:100px; right:100px;
+}
+
+@media (min-width: 1000px) {
+  #reservationButton {
+    position: relative; top:150px; right:125px;
+  }
+}

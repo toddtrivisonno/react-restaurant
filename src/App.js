@@ -16,14 +16,43 @@ import Jumbotron from './Components/Jumbotron'
 library.add(fab, faMapMarkerAlt, faUtensils, faClock, faPhone);
 
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <Jumbotron jumboImg="trattoria.png"/>
-      <NavigationCard />
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      content: null
+    }
+  }
+
+  async getDescription() {
+    const axios = require('axios');
+
+    const response = await axios.get('https://entree-f18.herokuapp.com/v1/menu/12')
+    console.log(response)
+    this.setState({
+      content: response
+    })
+  }
+
+  componentDidMount() {
+    this.getDescription();
+  }
+
+  render() {
+    console.log(this.state.content);
+    const descriptions = this.state.content ? this.state.content.data.menu_items : null;
+
+    return this.state.content ? (
+      <div className="App">
+        <Navbar />
+        <Jumbotron jumboImg="trattoria.png" />
+        <NavigationCard description={descriptions[0].description} />
+      </div>
+    ) : 
+    <div>Loading...</div>;
+  }
 }
+
 
 export default App;

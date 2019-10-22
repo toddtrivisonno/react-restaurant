@@ -5,7 +5,7 @@ import "./Navbar.css";
 class Navbar extends React.Component {
    constructor(props) {
       super(props);
-      this.navArray = [<h1>Trattoria al Trivisonno</h1>, <FontAwesomeIcon icon="map-marker-alt" />, <FontAwesomeIcon icon="clock" />, <FontAwesomeIcon icon="phone" />, <FontAwesomeIcon icon="utensils" />];
+      this.navArray = [<h1>Trattoria al Trivisonno</h1>, <FontAwesomeIcon icon="utensils" />, <FontAwesomeIcon icon="clock" />, <FontAwesomeIcon icon="phone" />, <FontAwesomeIcon icon="map-marker-alt" />];
    }
 
    render() {
