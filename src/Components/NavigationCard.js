@@ -1,16 +1,16 @@
 import React from 'react';
 import Card from './Card.js';
 import { Tabs, Tab } from 'react-bootstrap-tabs';
-
+import './NavigationCard.css';
 
 
 class NavigationCard extends React.Component {
 
    constructor(props) {
       super(props);
-      this.coursesArray = ['Antipasti', 'Primi', 'Secondi', 'Formaggi', 'Dolce'];
+      // this.coursesArray = ['Antipasti', 'Primi', 'Secondi', 'Formaggi', 'Dolce'];
       this.cardStyle = {
-         fontFamily: "cursive"
+         fontFamily: "cursive",
       }
    }
 
@@ -28,8 +28,8 @@ class NavigationCard extends React.Component {
             </div> */}
 
             <Tabs style={this.cardStyle} onSelect={(index, label) => console.log(label + ' selected')}>
-               <Tab label="Antipasti"><Card /></Tab>
-               <Tab label="Primi">Primooo</Tab>
+               <Tab label="Antipasti"><Card detail={this.props.description}/></Tab>
+               <Tab label="Primi"><Card /></Tab>
                <Tab label="Secondi">Secondoooo</Tab>
                <Tab label="Formaggi">CHEEEZ</Tab>
                <Tab label="Dolce">Sweetz</Tab>
