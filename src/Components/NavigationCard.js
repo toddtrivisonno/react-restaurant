@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from './Card.js';
- 
+import { Tabs, Tab } from 'react-bootstrap-tabs';
+
+
 
 class NavigationCard extends React.Component {
 
@@ -8,27 +10,31 @@ class NavigationCard extends React.Component {
       super(props);
       this.coursesArray = ['Antipasti', 'Primi', 'Secondi', 'Formaggi', 'Dolce'];
       this.cardStyle = {
-         fontFamily: "cursive",
+         fontFamily: "cursive"
       }
    }
 
    render() {
-      let courseNav = this.coursesArray.map((li, idx) => <a className={"nav-item p-2"} href={"#" + li}><p>{li}</p></a>)
+      // let courseNav = this.coursesArray.map((li, idx) => <a className={"nav-item p-2"} data-toggle="tab" href={"#" + li}><p>{li}</p></a>)
 
       return (
          <React.Fragment>
-            <div className="card text-center">
+            {/* <div className="card text-center">
                <div className="card-header">
                   <ul className="nav nav-tabs card-header-tabs" style={this.cardStyle}>
                      {courseNav}
                   </ul>
                </div>
-               <div className="card-body">
-                  {/* <p>Starter courses. <em>Antipasto</em> literally translates to <em>before the meal</em>, which typically involves pasta.</p> */}
-                  <Card />
-                  
-               </div>
-            </div>
+            </div> */}
+
+            <Tabs style={this.cardStyle} onSelect={(index, label) => console.log(label + ' selected')}>
+               <Tab label="Antipasti"><Card /></Tab>
+               <Tab label="Primi">Primooo</Tab>
+               <Tab label="Secondi">Secondoooo</Tab>
+               <Tab label="Formaggi">CHEEEZ</Tab>
+               <Tab label="Dolce">Sweetz</Tab>
+            </Tabs>
+
          </React.Fragment>
       )
    }

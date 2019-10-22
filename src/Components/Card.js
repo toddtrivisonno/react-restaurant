@@ -6,6 +6,7 @@ class Card extends React.Component {
       super(props);
       this.cardStyle = {
          fontFamily: "cursive",
+         border: "none"
       }
 
    }
