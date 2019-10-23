@@ -1,5 +1,9 @@
 a.nav-link {
-   padding: .5rem;
+   padding: .4rem;
+   /* font-family: 'Pinyon Script', cursive; */
+   font-family: 'Quattrocento', serif;
+
+   font-size: 1.2em;
 }
 
 .tab-content {

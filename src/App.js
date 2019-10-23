@@ -34,6 +34,8 @@ class App extends React.Component {
       item['description'] = response.data.menu_items[idx].description;
       return item;
     })
+    
+    {localStorage.length == 0 && localStorage.setItem('menu', JSON.stringify(fullMenu));}
 
     this.setState({
       content: fullMenu
@@ -45,11 +47,13 @@ class App extends React.Component {
   }
 
   render() {
-    return this.state.content ? (
+    const getMenu = JSON.parse(localStorage.getItem('menu'));
+
+    return this.state.content && localStorage.length > 0 ? (
       <div className="App">
         <Navbar />
         <Jumbotron jumboImg="trattoria.png" />
-        <NavigationCard menuItems={this.state.content} />
+        <NavigationCard menuItems={getMenu} />
       </div>
     ) :
       <div class="d-flex justify-content-center">
