@@ -22,7 +22,7 @@ class Jumbotron extends React.Component {
          <React.Fragment>
             <div id="jumbotron" className="jumbotron jumbotron-fluid" style={this.sectionStyle}>
             
-            <button className="btn btn-light btn-sm" id="reservationButton">Make A Reservation</button>
+            {this.props.isHeader == "true" && <button className="btn btn-light btn-sm" id="reservationButton">Make A Reservation</button>}
             </div>
          </React.Fragment>
       )

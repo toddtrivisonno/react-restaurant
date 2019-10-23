@@ -21,7 +21,7 @@ class Card extends React.Component {
          <React.Fragment>
             <br></br>
             <h3>{menuItem.item_name}</h3>
-            <h5>{menuItem.description}.......{menuItem.price}</h5>
+            <h5>{menuItem.description}.......{menuItem.price}</h5> 
          </React.Fragment>
       )
    }
