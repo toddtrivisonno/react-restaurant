@@ -1,4 +1,6 @@
 import React from 'react';
+import MenuNames from '../Menu.json';
+
 
 class Card extends React.Component {
 
@@ -11,19 +13,15 @@ class Card extends React.Component {
 
    }
 
-   
    render() {
+      const { menuItem = {} } = this.props;
       
-
       return (
          <React.Fragment>
-            <div className="card" style={this.cardStyle}>
-               <div className="card-body">
-                  <h5 className="card-title">Antipasti</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">Prosciutto e melone</h6>
-                  <p className="card-text">{this.props.detail}</p>
-               </div>
-            </div>
+            <br></br>
+            <h3>{menuItem.item_name}</h3>
+            <h4>{menuItem.price}</h4>
+            <h5>{menuItem.description}</h5>
          </React.Fragment>
       )
    }

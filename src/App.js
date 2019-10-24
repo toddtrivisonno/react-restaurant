@@ -11,6 +11,7 @@ import Card from './Components/Card.js';
 import Navbar from './Components/Navbar.js';
 import NavigationCard from './Components/NavigationCard.js'
 import Jumbotron from './Components/Jumbotron'
+import MenuNames from './Menu.json';
 
 
 library.add(fab, faMapMarkerAlt, faUtensils, faClock, faPhone);
@@ -21,17 +22,21 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: null
+      content: MenuNames.menu_names
     }
   }
 
   async getDescription() {
     const axios = require('axios');
 
-    const response = await axios.get('https://entree-f18.herokuapp.com/v1/menu/12')
-    console.log(response)
+    const response = await axios.get('https://entree-f18.herokuapp.com/v1/menu/15')
+    let fullMenu =  this.state.content.map((item, idx) => {
+      item['description'] = response.data.menu_items[idx].description;
+      return item;
+    })
+
     this.setState({
-      content: response
+      content: fullMenu
     })
   }
 
@@ -40,17 +45,18 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.content);
-    const descriptions = this.state.content ? this.state.content.data.menu_items : null;
-
     return this.state.content ? (
       <div className="App">
         <Navbar />
         <Jumbotron jumboImg="trattoria.png" />
-        <NavigationCard description={descriptions[0].description} />
+        <NavigationCard menuItems={this.state.content} />
       </div>
-    ) : 
-    <div>Loading...</div>;
+    ) :
+      <div class="d-flex justify-content-center">
+        <div className="spinner-border" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </div>
   }
 }
 

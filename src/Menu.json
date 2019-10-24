@@ -1,0 +1,79 @@
+{
+   "menu_names": [
+      {
+         "item_name": "Prosciutto e melone",
+         "price": "",
+         "course": "antipasti"
+      },
+      {
+         "item_name": "Olive della casa",
+         "price": "",
+         "course": "antipasti"
+      },
+      {
+         "item_name": "Polenta",
+         "price": "",
+         "course": "antipasti"
+      },
+      {
+         "item_name": "Bigoli all'anatra",
+         "price": "",
+         "course": "primi" 
+      },
+      {
+         "item_name": "Ciccio Pasticcio",
+         "price": "",
+         "course": "primi" 
+      },
+      {
+         "item_name": "Fiocchetti con ricotta e pere",
+         "price": "",
+         "course": "primi" 
+      },
+      {
+         "item_name": "Spezzatino di cinghiale",
+         "price": "",
+         "course": "secondi" 
+      },
+      {
+         "item_name": "Baccala alla vicentina",
+         "price": "",
+         "course": "secondi" 
+      },
+      {
+         "item_name": "Magnagati",
+         "price": "",
+         "course": "secondi" 
+      },
+      {
+         "item_name": "Asiago stravecchio",
+         "price": "",
+         "course": "formaggi" 
+      },
+      {
+         "item_name": "Pecorino pepato",
+         "price": "",
+         "course": "formaggi" 
+      },
+      {
+         "item_name": "Mozzarella affumicata",
+         "price": "",
+         "course": "formaggi" 
+      },
+      {
+         "item_name": "Tiramisu",
+         "price": "",
+         "course": "dolce"
+      },
+      {
+         "item_name": "Panna cotta",
+         "price": "",
+         "course": "dolce"
+      },
+      {
+         "item_name": "Gelato",
+         "price": "",
+         "course": "dolce"
+      }
+   ]
+}

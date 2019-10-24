@@ -8,31 +8,36 @@ class NavigationCard extends React.Component {
 
    constructor(props) {
       super(props);
-      // this.coursesArray = ['Antipasti', 'Primi', 'Secondi', 'Formaggi', 'Dolce'];
       this.cardStyle = {
          fontFamily: "cursive",
       }
+
+   }
+   
+   createTab(label) {
+      let cards =
+         this.props.menuItems
+            .filter(item => item.course === label.toLowerCase())
+            .map((item) => {
+               return <Card key={item.item_name} menuItem={item} />
+            })
+
+      return (
+         <Tab key={label} label={label}>
+            {cards}
+         </Tab>
+      )
    }
 
    render() {
-      // let courseNav = this.coursesArray.map((li, idx) => <a className={"nav-item p-2"} data-toggle="tab" href={"#" + li}><p>{li}</p></a>)
-
       return (
          <React.Fragment>
-            {/* <div className="card text-center">
-               <div className="card-header">
-                  <ul className="nav nav-tabs card-header-tabs" style={this.cardStyle}>
-                     {courseNav}
-                  </ul>
-               </div>
-            </div> */}
-
             <Tabs style={this.cardStyle} onSelect={(index, label) => console.log(label + ' selected')}>
-               <Tab label="Antipasti"><Card detail={this.props.description}/></Tab>
-               <Tab label="Primi"><Card /></Tab>
-               <Tab label="Secondi">Secondoooo</Tab>
-               <Tab label="Formaggi">CHEEEZ</Tab>
-               <Tab label="Dolce">Sweetz</Tab>
+               {this.createTab('Antipasti')}
+               {this.createTab('Primi')}
+               {this.createTab('Secondi')}
+               {this.createTab('Formaggi')}
+               {this.createTab('Dolce')}
             </Tabs>
 
          </React.Fragment>

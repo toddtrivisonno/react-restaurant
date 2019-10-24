@@ -2,6 +2,11 @@ a.nav-link {
    padding: .5rem;
 }
 
+.tab-content {
+   padding-left: 1em;
+   padding-right: 1em;
+}
+
 @media (min-width: 1000px) {
    a.nav-link {
       padding: 1rem;
