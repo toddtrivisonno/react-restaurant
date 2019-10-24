@@ -11,18 +11,22 @@ class Jumbotron extends React.Component {
          backgroundPosition: "center",
          backgroundRepeat: "no-repeat",
          backgroundSize: "cover",
-         // position: "relative",
-         // color: "white"
       }
 
+   }
+
+   handleClick() {
+      console.log('click')
    }
 
    render() {
       return (
          <React.Fragment>
             <div id="jumbotron" className="jumbotron jumbotron-fluid" style={this.sectionStyle}>
-            
-            {this.props.isHeader == "true" && <button className="btn btn-light btn-sm" id="reservationButton">Make A Reservation</button>}
+               {this.props.isHeader == "true" &&
+                  <button className="btn btn-light btn-sm" id="reservationButton" onClick={this.handleClick}>
+                     Make A Reservation
+                  </button>}
             </div>
          </React.Fragment>
       )

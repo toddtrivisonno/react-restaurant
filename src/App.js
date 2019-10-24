@@ -58,7 +58,7 @@ class App extends React.Component {
         <Jumbotron jumboImg="trattoria.png" isHeader="true" />
         <NavigationCard menuItems={getMenu} />
         <Jumbotron jumboImg="wine_edit.jpg" />
-        <hr></hr>
+        <hr id="2"></hr>
         <Table />
         <Directions />
       </div>

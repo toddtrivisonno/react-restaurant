@@ -32,7 +32,7 @@ class NavigationCard extends React.Component {
    render() {
       return (
          <React.Fragment>
-            <hr></hr>
+            <hr id="1"></hr>
             <h1 className="text-center">Menu</h1>
             <Tabs style={this.cardStyle} onSelect={(index, label) => console.log(label + ' selected')}>
                {this.createTab('Antipasti')}

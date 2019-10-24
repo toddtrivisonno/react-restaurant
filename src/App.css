@@ -1,4 +1,8 @@
 
+html {
+  scroll-behavior: smooth;
+}
+
 #reservationButton {
   position: relative; top:100px; right:100px;
 }

@@ -47,7 +47,7 @@ class Table extends React.Component {
                      </table>
                   </div>
                </div>
-               <div className="card">
+               <div className="card" id="3">
                   <div className="card-body text-center" id="contactCard">
                      <h1>Contact Us</h1>
                      <img src="letterT.png" width="100px" className="m-4" />

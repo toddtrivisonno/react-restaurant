@@ -9,7 +9,7 @@ class Navbar extends React.Component {
    }
 
    render() {
-      let navButton = this.navArray.map((button, idx) => <a key={idx} href={"#" + button} className="btn btn-light"><h3>{button}</h3></a>)
+      let navButton = this.navArray.map((button, idx) => <a key={idx} href={"#" + idx} className="btn btn-light"><h3>{button}</h3></a>)
 
       return (
          <React.Fragment>
