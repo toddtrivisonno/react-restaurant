@@ -9,7 +9,7 @@ class NavigationCard extends React.Component {
       super(props);
    }
 
-// ---  --- //
+// --- Create tab, passing in the label name. Filter by name which corresponds to JSON 'course.' Map descriptions to card.  --- //
    createTab(label) {
       let cards =
          this.props.menuItems

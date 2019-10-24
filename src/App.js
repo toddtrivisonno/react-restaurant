@@ -18,7 +18,6 @@ library.add(fab, faMapMarkerAlt, faUtensils, faClock, faPhone, faEnvelope);
 
 class App extends React.Component {
 
-  // --- Initialize state --- //
   constructor(props) {
     super(props);
     this.state = {
