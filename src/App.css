@@ -1,14 +1,34 @@
-/* .App {
-  text-align: center;
-  background-color: #282c34;
-  color: white;
-  min-height: 10vh;
-  font-family: cursive;
-  font-size: 3em;
-} */
+html {
+  scroll-behavior: smooth;
+}
 
-#reservationButton {
+.fontQ {
+  font-family: 'Quattrocento', serif;
+}
+
+h1 {
+  font-family: 'Pinyon Script', cursive;
+}
+
+.reservationButton {
   position: relative; top:100px; right:100px;
+}
+
+.jumbotron {
+  padding: 7rem;
+}
+
+@media (min-width: 1000px) {
+  .jumbotron {
+     padding: 12rem;
+  }
+}
+
+@media (min-width: 750px) {
+  iFrame {
+     width: 500px;
+     height: 500px;
+  }
 }
 
 @media (min-width: 1000px) {

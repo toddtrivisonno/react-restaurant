@@ -1,17 +1,12 @@
 import React from 'react';
-import MenuNames from '../Menu.json';
-import './Card.css';
-
 
 class Card extends React.Component {
 
    constructor(props) {
       super(props);
       this.cardStyle = {
-         // fontFamily: "cursive",
          border: "none"
       }
-
    }
 
    render() {
@@ -20,8 +15,8 @@ class Card extends React.Component {
       return (
          <React.Fragment>
             <br></br>
-            <h3>{menuItem.item_name}</h3>
-            <h5>{menuItem.description}.......{menuItem.price}</h5>
+            <h3 className="fontQ">{menuItem.item_name}</h3>
+            <h5 className="fontQ">{menuItem.description}.......{menuItem.price}</h5> 
          </React.Fragment>
       )
    }

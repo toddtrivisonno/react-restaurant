@@ -1,8 +1,11 @@
+hr {
+   margin-left: 20vw;
+   margin-right: 20vw;
+}
+
 a.nav-link {
    padding: .4rem;
-   /* font-family: 'Pinyon Script', cursive; */
    font-family: 'Quattrocento', serif;
-
    font-size: 1.2em;
 }
 
@@ -15,5 +18,8 @@ a.nav-link {
    a.nav-link {
       padding: 1rem;
       font-size: 1.5em;
+   }
+   div.tabs {
+      text-align: center;
    }
 }
