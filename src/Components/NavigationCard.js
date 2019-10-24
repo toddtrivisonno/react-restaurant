@@ -9,7 +9,7 @@ class NavigationCard extends React.Component {
    constructor(props) {
       super(props);
       this.cardStyle = {
-         fontFamily: "cursive",
+         // fontFamily: "cursive",
       }
 
    }
