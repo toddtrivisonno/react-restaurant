@@ -3,17 +3,13 @@ import Card from './Card.js';
 import { Tabs, Tab } from 'react-bootstrap-tabs';
 import './NavigationCard.css';
 
-
 class NavigationCard extends React.Component {
 
    constructor(props) {
       super(props);
-      this.cardStyle = {
-         // fontFamily: "cursive",
-      }
-
    }
 
+// --- Create tab, passing in the label name. Filter by name which corresponds to JSON 'course.' Map descriptions to card.  --- //
    createTab(label) {
       let cards =
          this.props.menuItems
@@ -32,9 +28,9 @@ class NavigationCard extends React.Component {
    render() {
       return (
          <React.Fragment>
-            <hr></hr>
+            <hr id="1"></hr>
             <h1 className="text-center">Menu</h1>
-            <Tabs style={this.cardStyle} onSelect={(index, label) => console.log(label + ' selected')}>
+            <Tabs onSelect={(index, label) => console.log(label + ' selected')}>
                {this.createTab('Antipasti')}
                {this.createTab('Primi')}
                {this.createTab('Secondi')}
@@ -42,7 +38,6 @@ class NavigationCard extends React.Component {
                {this.createTab('Dolce')}
             </Tabs>
             <hr></hr>
-
          </React.Fragment>
       )
    }
