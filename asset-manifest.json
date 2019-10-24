@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "link-to-your-repository/static/css/main.ac8e0c18.chunk.css",
+    "main.js": "link-to-your-repository/static/js/main.e98726df.chunk.js",
+    "main.js.map": "link-to-your-repository/static/js/main.e98726df.chunk.js.map",
+    "runtime-main.js": "link-to-your-repository/static/js/runtime-main.6ada68ba.js",
+    "runtime-main.js.map": "link-to-your-repository/static/js/runtime-main.6ada68ba.js.map",
+    "static/css/2.a35a71c9.chunk.css": "link-to-your-repository/static/css/2.a35a71c9.chunk.css",
+    "static/js/2.f37b74e7.chunk.js": "link-to-your-repository/static/js/2.f37b74e7.chunk.js",
+    "static/js/2.f37b74e7.chunk.js.map": "link-to-your-repository/static/js/2.f37b74e7.chunk.js.map",
+    "index.html": "link-to-your-repository/index.html",
+    "precache-manifest.7bf5db9e307e2c3f88f72e3dd0527b18.js": "link-to-your-repository/precache-manifest.7bf5db9e307e2c3f88f72e3dd0527b18.js",
+    "service-worker.js": "link-to-your-repository/service-worker.js",
+    "static/css/2.a35a71c9.chunk.css.map": "link-to-your-repository/static/css/2.a35a71c9.chunk.css.map",
+    "static/css/main.ac8e0c18.chunk.css.map": "link-to-your-repository/static/css/main.ac8e0c18.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ada68ba.js",
+    "static/css/2.a35a71c9.chunk.css",
+    "static/js/2.f37b74e7.chunk.js",
+    "static/css/main.ac8e0c18.chunk.css",
+    "static/js/main.e98726df.chunk.js"
+  ]
+}
