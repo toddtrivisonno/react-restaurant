@@ -1,9 +1,16 @@
-
 html {
   scroll-behavior: smooth;
 }
 
-#reservationButton {
+.fontQ {
+  font-family: 'Quattrocento', serif;
+}
+
+h1 {
+  font-family: 'Pinyon Script', cursive;
+}
+
+.reservationButton {
   position: relative; top:100px; right:100px;
 }
 

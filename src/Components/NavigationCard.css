@@ -1,11 +1,7 @@
-h1 {
-   font-family: 'Pinyon Script', cursive;
- }
-
- hr {
-    margin-left: 20vw;
-    margin-right: 20vw;
- }
+hr {
+   margin-left: 20vw;
+   margin-right: 20vw;
+}
 
 a.nav-link {
    padding: .4rem;
@@ -23,7 +19,6 @@ a.nav-link {
       padding: 1rem;
       font-size: 1.5em;
    }
-
    div.tabs {
       text-align: center;
    }

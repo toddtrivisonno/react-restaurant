@@ -7,21 +7,18 @@ import { faClock } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Card from './Components/Card.js';
 import Navbar from './Components/Navbar.js';
 import NavigationCard from './Components/NavigationCard.js'
 import Jumbotron from './Components/Jumbotron'
-import MenuNames from './Menu.json';
 import Directions from './Components/Directions.js';
 import Table from './Components/Table.js';
-
-
+import MenuNames from './Menu.json';
 
 library.add(fab, faMapMarkerAlt, faUtensils, faClock, faPhone, faEnvelope);
 
-
 class App extends React.Component {
 
+  // --- Initialize state --- //
   constructor(props) {
     super(props);
     this.state = {
@@ -29,29 +26,31 @@ class App extends React.Component {
     }
   }
 
+  // --- Get and Set API. Add API response to my JSON --- //
   async getDescription() {
     const axios = require('axios');
-
     const response = await axios.get('https://entree-f18.herokuapp.com/v1/menu/15')
-    let fullMenu =  this.state.content.map((item, idx) => {
+    let fullMenu = this.state.content.map((item, idx) => {
       item['description'] = response.data.menu_items[idx].description;
       return item;
     })
-    
-    {localStorage.length == 0 && localStorage.setItem('menu', JSON.stringify(fullMenu));}
+
+  // --- Prevent page getting stuck loading when localStorage is empty --- //
+    { localStorage.length === 0 && localStorage.setItem('menu', JSON.stringify(fullMenu)); }
 
     this.setState({
       content: fullMenu
     })
   }
 
+  // --- Calls API once component mounts --- //
   componentDidMount() {
     this.getDescription();
   }
 
+  // --- Parse the JSON. If response is present, populate the page, else show spinner --- //
   render() {
     const getMenu = JSON.parse(localStorage.getItem('menu'));
-
     return this.state.content && localStorage.length > 0 ? (
       <div className="App">
         <Navbar />
@@ -63,13 +62,12 @@ class App extends React.Component {
         <Directions />
       </div>
     ) :
-      <div class="d-flex justify-content-center">
+      <div className="d-flex justify-content-center">
         <div className="spinner-border" role="status">
           <span className="sr-only">Loading...</span>
         </div>
       </div>
   }
 }
-
 
 export default App;

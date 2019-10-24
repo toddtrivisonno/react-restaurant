@@ -1,6 +1,5 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import "./Navbar.css";
 
 class Navbar extends React.Component {
    constructor(props) {
@@ -8,8 +7,12 @@ class Navbar extends React.Component {
       this.navArray = [<h1>Trattoria al Trivisonno</h1>, <FontAwesomeIcon icon="utensils" />, <FontAwesomeIcon icon="clock" />, <FontAwesomeIcon icon="phone" />, <FontAwesomeIcon icon="map-marker-alt" />];
    }
 
+   // --- Create Navigation bar with nav buttons --- //
    render() {
-      let navButton = this.navArray.map((button, idx) => <a key={idx} href={"#" + idx} className="btn btn-light"><h3>{button}</h3></a>)
+      let navButton = this.navArray.map((button, idx) =>
+         <a key={idx} href={"#" + idx} className="btn btn-light">
+            <h3>{button}</h3>
+         </a>)
 
       return (
          <React.Fragment>
@@ -18,7 +21,6 @@ class Navbar extends React.Component {
             </nav>
          </React.Fragment>
       )
-
    }
 }
 

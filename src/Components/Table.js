@@ -1,19 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './Table.css';
-
 
 class Table extends React.Component {
 
    render() {
-
       return (
          <React.Fragment>
             <div className="card-group">
                <div className="card">
                   <div className="card-body">
                      <h1 className="text-center">Hours</h1>
-                     <table className="table text-center">
+                     <table className="table text-center fontQ">
                         <tbody>
                            <tr>
                               <th scope="row">Sunday</th>
@@ -51,8 +48,8 @@ class Table extends React.Component {
                   <div className="card-body text-center" id="contactCard">
                      <h1>Contact Us</h1>
                      <img src="letterT.png" width="100px" className="m-4" />
-                     <h3><FontAwesomeIcon icon="phone" /> 859.960.4600</h3>
-                     <h3><FontAwesomeIcon icon="envelope" /> info@awesomeinc.org</h3>
+                     <h3 className="fontQ"><FontAwesomeIcon icon="phone" /> 859.960.4600</h3>
+                     <h3 className="fontQ"><FontAwesomeIcon icon="envelope" /> info@awesomeinc.org</h3>
                   </div>
                </div>
             </div>
