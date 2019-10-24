@@ -1,5 +1,4 @@
 import React from 'react';
-import './Directions.css';
 
 class Directions extends React.Component {
 

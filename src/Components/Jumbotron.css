@@ -1,9 +1,0 @@
-.jumbotron {
-   padding: 7rem;
-}
-
-@media (min-width: 1000px) {
-   .jumbotron {
-      padding: 12rem;
-   }
-}
