@@ -2,77 +2,77 @@
    "menu_names": [
       {
          "item_name": "Prosciutto e melone",
-         "price": "",
+         "price": "$17",
          "course": "antipasti"
       },
       {
          "item_name": "Olive della casa",
-         "price": "",
+         "price": "$15",
          "course": "antipasti"
       },
       {
          "item_name": "Polenta",
-         "price": "",
+         "price": "$18",
          "course": "antipasti"
       },
       {
          "item_name": "Bigoli all'anatra",
-         "price": "",
+         "price": "$22",
          "course": "primi" 
       },
       {
          "item_name": "Ciccio Pasticcio",
-         "price": "",
+         "price": "$25",
          "course": "primi" 
       },
       {
          "item_name": "Fiocchetti con ricotta e pere",
-         "price": "",
+         "price": "$29",
          "course": "primi" 
       },
       {
          "item_name": "Spezzatino di cinghiale",
-         "price": "",
+         "price": "$35",
          "course": "secondi" 
       },
       {
          "item_name": "Baccala alla vicentina",
-         "price": "",
+         "price": "$29",
          "course": "secondi" 
       },
       {
          "item_name": "Magnagati",
-         "price": "",
+         "price": "$2",
          "course": "secondi" 
       },
       {
          "item_name": "Asiago stravecchio",
-         "price": "",
+         "price": "$12",
          "course": "formaggi" 
       },
       {
          "item_name": "Pecorino pepato",
-         "price": "",
+         "price": "$9",
          "course": "formaggi" 
       },
       {
          "item_name": "Mozzarella affumicata",
-         "price": "",
+         "price": "$15",
          "course": "formaggi" 
       },
       {
          "item_name": "Tiramisu",
-         "price": "",
+         "price": "$12",
          "course": "dolce"
       },
       {
          "item_name": "Panna cotta",
-         "price": "",
+         "price": "$10",
          "course": "dolce"
       },
       {
          "item_name": "Gelato",
-         "price": "",
+         "price": "$5",
          "course": "dolce"
       }
    ]

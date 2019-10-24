@@ -2,6 +2,10 @@
    padding: 7rem;
 }
 
+#reservationButton {
+   font-family: 'Quattrocento', serif;
+}
+
 @media (min-width: 1000px) {
    .jumbotron {
       padding: 12rem;

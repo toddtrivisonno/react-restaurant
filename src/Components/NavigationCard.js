@@ -9,11 +9,11 @@ class NavigationCard extends React.Component {
    constructor(props) {
       super(props);
       this.cardStyle = {
-         fontFamily: "cursive",
+         // fontFamily: "cursive",
       }
 
    }
-   
+
    createTab(label) {
       let cards =
          this.props.menuItems
@@ -32,6 +32,8 @@ class NavigationCard extends React.Component {
    render() {
       return (
          <React.Fragment>
+            <hr></hr>
+            <h1 className="text-center">Menu</h1>
             <Tabs style={this.cardStyle} onSelect={(index, label) => console.log(label + ' selected')}>
                {this.createTab('Antipasti')}
                {this.createTab('Primi')}
@@ -39,6 +41,7 @@ class NavigationCard extends React.Component {
                {this.createTab('Formaggi')}
                {this.createTab('Dolce')}
             </Tabs>
+            <hr></hr>
 
          </React.Fragment>
       )

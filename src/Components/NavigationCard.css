@@ -1,5 +1,16 @@
+h1 {
+   font-family: 'Pinyon Script', cursive;
+ }
+
+ hr {
+    margin-left: 20vw;
+    margin-right: 20vw;
+ }
+
 a.nav-link {
-   padding: .5rem;
+   padding: .4rem;
+   font-family: 'Quattrocento', serif;
+   font-size: 1.2em;
 }
 
 .tab-content {
@@ -11,5 +22,9 @@ a.nav-link {
    a.nav-link {
       padding: 1rem;
       font-size: 1.5em;
+   }
+
+   div.tabs {
+      text-align: center;
    }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faUtensils } from '@fortawesome/free-solid-svg-icons'
+import { faUtensils, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { faClock } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
@@ -12,9 +12,12 @@ import Navbar from './Components/Navbar.js';
 import NavigationCard from './Components/NavigationCard.js'
 import Jumbotron from './Components/Jumbotron'
 import MenuNames from './Menu.json';
+import Directions from './Components/Directions.js';
+import Table from './Components/Table.js';
 
 
-library.add(fab, faMapMarkerAlt, faUtensils, faClock, faPhone);
+
+library.add(fab, faMapMarkerAlt, faUtensils, faClock, faPhone, faEnvelope);
 
 
 class App extends React.Component {
@@ -34,6 +37,8 @@ class App extends React.Component {
       item['description'] = response.data.menu_items[idx].description;
       return item;
     })
+    
+    {localStorage.length == 0 && localStorage.setItem('menu', JSON.stringify(fullMenu));}
 
     this.setState({
       content: fullMenu
@@ -45,11 +50,17 @@ class App extends React.Component {
   }
 
   render() {
-    return this.state.content ? (
+    const getMenu = JSON.parse(localStorage.getItem('menu'));
+
+    return this.state.content && localStorage.length > 0 ? (
       <div className="App">
         <Navbar />
-        <Jumbotron jumboImg="trattoria.png" />
-        <NavigationCard menuItems={this.state.content} />
+        <Jumbotron jumboImg="trattoria.png" isHeader="true" />
+        <NavigationCard menuItems={getMenu} />
+        <Jumbotron jumboImg="wine_edit.jpg" />
+        <hr></hr>
+        <Table />
+        <Directions />
       </div>
     ) :
       <div class="d-flex justify-content-center">
